@@ -6,8 +6,8 @@ package frc.robot;
 public class RobotMap {
   //Motors
     //Drive Motors
-        public static int RightMotor = 1;
-        public static int LeftMotor = 2;
+        public static int RightMotor = 25;
+        public static int LeftMotor = 27;
        //Follower Motors
           public static int RightFollower = 3;
           public static int RightFollower2 = 4;
