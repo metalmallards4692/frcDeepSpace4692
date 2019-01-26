@@ -10,15 +10,24 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.TankDrive;
 import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
 import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
-
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import frc.robot.subsystems.DriveTrain;
 
 
 public class Robot extends TimedRobot {
-  public static DriveTrain m_subsystem = new DriveTrain();
+  public static DriveTrain driveTrain = new DriveTrain();
+  private Command TankDrive;
+ // public static TankDrive tankDrive = new TankDrive();
   public static OI m_oi;
+  
+
+  //TalonSRX RightMotor = new TalonSRX(25);
+  //TalonSRX LeftMotor = new TalonSRX(27);
+  //DifferentialDrive DiffDrive = new DifferentialDrive(LeftMotor, RightMotor);
+
+
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -28,7 +37,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new TankDrive());
-    
+    TankDrive = new TankDrive();
     SmartDashboard.putData("Auto mode", m_chooser);
   }
 
@@ -70,6 +79,9 @@ public class Robot extends TimedRobot {
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
     }
+
+    TankDrive.start();
+    
   }
 
   
