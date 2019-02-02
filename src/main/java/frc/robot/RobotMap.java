@@ -4,17 +4,25 @@ package frc.robot;
 
 
 public class RobotMap {
-  //Motors
+  //TalonSRX Motors
     //Drive Motors
-        public static int RightMotor = 25;
-        public static int LeftMotor = 27;
+        public static int RightMotor = 40;
+        public static int LeftMotor = 41;
        //Follower Motors
-          public static int RightFollower = 3;
-          public static int RightFollower2 = 4;
-          public static int RightFollower3 = 5;
-          public static int LeftFollower = 6;
-          public static int LeftFollower2 = 7;
-          public static int LeftFollower3 = 8;
+          public static int RightFollower = 42;
+          public static int RightFollower2 = 44;
+          public static int RightFollower3 = 46;
+          public static int LeftFollower = 43;
+          public static int LeftFollower2 = 45;
+          public static int LeftFollower3 = 47;
+     //Other Motors
+        public static int IntakeMotor = 48;
+        public static int IntakePivot = 49;
+        public static int ArmStrong = 51;
+        public static int Vacuum = 50;
+  //Max Motors
+     public static int Elevator = 14;
+     public static int ArmStrongLift = 12;
   //Joysticks
       public static int RightJoystick = 0;
       public static int LeftJoystick = 1;
@@ -30,7 +38,7 @@ public class RobotMap {
            public static int GamepadY = 4;
            public static int GamepadR1 = 5;
            public static int GamepadL1 = 6;
-           //
+           
 
       }
 
