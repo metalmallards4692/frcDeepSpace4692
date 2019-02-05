@@ -10,8 +10,12 @@ import com.revrobotics.CANSparkMax;
 public class Elevator extends Subsystem {
   private CANSparkMax Elevator;
 
-  public Elevator() {
+  public void Elevator(double output) {
         Elevator = new CANSparkMax(14, MotorType.kBrushless);
+
+        
+
+        Elevator.set(1);
 
   }
 

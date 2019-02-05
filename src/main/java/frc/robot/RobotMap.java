@@ -38,6 +38,8 @@ public class RobotMap {
            public static int GamepadY = 4;
            public static int GamepadR1 = 5;
            public static int GamepadL1 = 6;
+           public static int GamepadStart = 7;
+           public static int GamepadSelect = 8;
            
 
       }
