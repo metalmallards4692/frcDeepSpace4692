@@ -17,7 +17,7 @@ public class RobotMap {
           public static int LeftFollower3 = 47;
      //Other Motors
         public static int Intake = 48;
-        public static int PivotOut = 49;
+        public static int Pivot = 49;
         public static int ArmStrong = 51;
         public static int Vacuum = 50;
   //Max Motors

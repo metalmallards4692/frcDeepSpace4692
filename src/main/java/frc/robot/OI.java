@@ -16,6 +16,8 @@ public class OI {
 	public JoystickButton gamepadB;
 	public JoystickButton gamepadStart;
 	public JoystickButton gamepadSelect;
+	public JoystickButton gamepadL1;
+	public JoystickButton gamepadR1;
     public static final double JOY_DEADZONE = 0.05;
     
     public double getLeftJoyX() {
@@ -41,6 +43,8 @@ public class OI {
 		gamepadB = new JoystickButton(gamepad, RobotMap.GamepadB);
 		gamepadStart = new JoystickButton(gamepad, RobotMap.GamepadStart);
 		gamepadSelect = new JoystickButton(gamepad, RobotMap.GamepadSelect);
+		gamepadR1 = new JoystickButton(gamepad, RobotMap.GamepadR1);
+		gamepadL1 = new JoystickButton(gamepad, RobotMap.GamepadL1);
 
 
 		//command calls
@@ -48,6 +52,10 @@ public class OI {
 		gamepadY.whileHeld(new BallOuttake());
 		gamepadStart.whileHeld(new ElevatorUp());
 		gamepadSelect.whileHeld(new ElevatorDown());
+		gamepadX.whileHeld(new PivotIn());
+		gamepadB.whileHeld(new PivotOut());
+		gamepadR1.whenPressed(new ArmStrongLift());
+		gamepadL1.whenPressed(new ArmStrongDrop());
 		
 
 	}

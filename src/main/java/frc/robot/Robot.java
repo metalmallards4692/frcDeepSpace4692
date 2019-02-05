@@ -23,6 +23,7 @@ public class Robot extends TimedRobot {
   public static DriveTrain driveTrain = new DriveTrain();
   public static Elevator elevator = new Elevator();
   public static MainArm mainArm = new MainArm();
+  public static ArmStrong armStrong = new ArmStrong();
   private Command TankDrive;
   
  //public static TankDrive tankDrive = new TankDrive();
