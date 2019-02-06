@@ -16,7 +16,7 @@ public class ArmStrong extends Subsystem {
   private CANSparkMax ArmStrongLift;
   private TalonSRX ArmStrong;
 
-  public void ArmStrong(double output) {
+  public void ArmStrongDrive(double output) {
       ArmStrong = new TalonSRX(RobotMap.ArmStrong);
 
       Robot.initTalon(ArmStrong);

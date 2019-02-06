@@ -19,7 +19,7 @@ public class ArmStrongLift extends Command {
   
   @Override
   protected void execute() {
-    Robot.armStrong.ArmStrong(1);
+    Robot.armStrong.ArmStrongLift(1);
   }
 
  
@@ -31,7 +31,7 @@ public class ArmStrongLift extends Command {
  
   @Override
   protected void end() {
-    Robot.armStrong.ArmStrong(0);
+    Robot.armStrong.ArmStrongLift(0);
   }
 
 
