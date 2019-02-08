@@ -15,22 +15,22 @@ public class RobotMap {
           public static int LeftFollower = 43;
           public static int LeftFollower2 = 45;
           public static int LeftFollower3 = 47;
-     //Other Motors
-        public static int Intake = 48;
-        public static int Pivot = 49;
-        public static int ArmStrong = 51;
-        public static int Vacuum = 50;
-  //Max Motors
+    //Other Motors
+    public static int Intake = 48;
+    public static int Pivot = 49;
+    public static int ArmStrong = 51;
+    public static int Vacuum = 50;
+  //SparkMax Motors
      public static int Elevator = 14;
      public static int ArmStrongLift = 12;
   //Joysticks
-      public static int RightJoystick = 0;
-      public static int LeftJoystick = 1;
+      public static int RightJoystick = 1;
+      public static int LeftJoystick = 2;
       //Joystick Buttons
           public static int BtnLiftUp = 1;
           public static int BtnLiftUP = 2;
   //Gamepad
-      public static int Gamepad = 2;
+      public static int Gamepad = 3;
        //Gamepad Buttons
            public static int GamepadA = 1;
            public static int GamepadB = 2;
