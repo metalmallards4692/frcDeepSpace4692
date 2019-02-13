@@ -18,7 +18,7 @@ public class ElevatorDown extends Command {
 
   @Override
   protected void execute() {
-      Robot.elevator.Elevator(-1);
+      Robot.elevator.ElevatorDirection(-1);
   }
 
   @Override
@@ -28,7 +28,7 @@ public class ElevatorDown extends Command {
 
   @Override
   protected void end() {
-    Robot.elevator.Elevator(0);
+    Robot.elevator.ElevatorDirection(0);
   }
 
   @Override
