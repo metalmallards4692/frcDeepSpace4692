@@ -7,7 +7,7 @@ import frc.robot.Robot;
 
 public class BallIntake extends Command {
   public BallIntake() {
-    requires(Robot.mainArm);
+    requires(Robot.aldrin);
     
   }
 
@@ -20,7 +20,7 @@ public class BallIntake extends Command {
   @Override
   protected void execute() {
     //Check The Motor Direction
-    Robot.mainArm.TakeBall(1);
+    Robot.aldrin.TakeBall(1);
   }
 
   
@@ -32,7 +32,7 @@ public class BallIntake extends Command {
  
   @Override
   protected void end() {
-    Robot.mainArm.TakeBall(0);
+    Robot.aldrin.TakeBall(0);
   }
 
  

@@ -28,7 +28,7 @@ public class ArmStrong extends Subsystem {
   public void ArmStrongLift(double output) {
       ArmStrongLift = new CANSparkMax(12, MotorType.kBrushless);
 
-      ArmStrongLift.set(1);
+      ArmStrongLift.set(output);
 
   }
 

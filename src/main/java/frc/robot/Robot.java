@@ -20,7 +20,7 @@ import frc.robot.commands.*;
 public class Robot extends TimedRobot {
   public static DriveTrain driveTrain = new DriveTrain();
   public static Elevator elevator = new Elevator();
-  public static MainArm mainArm = new MainArm();
+  public static Aldrin aldrin = new Aldrin();
   public static ArmStrong armStrong = new ArmStrong();
   private Command TankDrive;
   //private Command ArmStrongDrive;
