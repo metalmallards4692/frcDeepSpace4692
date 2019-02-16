@@ -13,23 +13,19 @@ import frc.robot.RobotMap;
 
 
 public class ArmStrong extends Subsystem {
-  private CANSparkMax ArmStrongLift;
-  private TalonSRX ArmStrong;
+  private CANSparkMax ArmStrongLift=new CANSparkMax(12, MotorType.kBrushless);;
+  private TalonSRX ArmStrongDriveMotor;
 
   public void ArmStrongDrive(double output) {
-      ArmStrong = new TalonSRX(RobotMap.ArmStrong);
+      ArmStrongDriveMotor = new TalonSRX(RobotMap.ArmStrong);
 
-      Robot.initTalon(ArmStrong);
-
-      ArmStrong.set(ControlMode.PercentOutput, output);
+      Robot.initTalon(ArmStrongDriveMotor);
+      ArmStrongDriveMotor.set(ControlMode.PercentOutput, output);
 
   }
 
-  public void ArmStrongLift(double output) {
-      ArmStrongLift = new CANSparkMax(12, MotorType.kBrushless);
-
+  public void ArmStrongLift(double output) {      
       ArmStrongLift.set(output);
-
   }
 
 

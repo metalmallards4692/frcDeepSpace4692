@@ -24,13 +24,13 @@ public class RobotMap {
      public static int Elevator = 14;
      public static int ArmStrongLift = 12;
   //Joysticks
-      public static int RightJoystick = 1;
-      public static int LeftJoystick = 2;
+      public static int RightJoystick = 0;
+      public static int LeftJoystick = 1;
       //Joystick Buttons
           public static int BtnLiftUp = 1;
           public static int BtnLiftUP = 2;
   //Gamepad
-      public static int Gamepad = 3;
+      public static int Gamepad = 2;
        //Gamepad Buttons
            public static int GamepadA = 1;
            public static int GamepadB = 2;

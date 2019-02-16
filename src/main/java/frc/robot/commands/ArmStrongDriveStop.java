@@ -1,12 +1,13 @@
 
 
 package frc.robot.commands;
-import frc.robot.Robot;
-import edu.wpi.first.wpilibj.command.Command;
 
-public class ArmStrongStop extends Command {
-  public ArmStrongStop() {
-  
+import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.Robot;
+
+public class ArmStrongDriveStop extends Command {
+  public ArmStrongDriveStop() {
+    requires(Robot.armStrong);
   }
 
 
@@ -17,8 +18,7 @@ public class ArmStrongStop extends Command {
 
   @Override
   protected void execute() {
-    Robot.armStrong.ArmStrongLift(0);
-    
+    Robot.armStrong.ArmStrongDrive(0);
   }
 
 
@@ -30,7 +30,7 @@ public class ArmStrongStop extends Command {
 
   @Override
   protected void end() {
-    Robot.armStrong.ArmStrongLift(0);
+    Robot.armStrong.ArmStrongDrive(0);
   }
 
 
