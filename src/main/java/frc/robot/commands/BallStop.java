@@ -4,10 +4,11 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class hatchDeploy extends Command {
-  public hatchDeploy() {
+public class BallStop extends Command {
+  public BallStop() {
     requires(Robot.aldrin);
   }
+
 
   @Override
   protected void initialize() {
@@ -15,7 +16,7 @@ public class hatchDeploy extends Command {
 
   @Override
   protected void execute() {
-    Robot.aldrin.doHatch(-1);
+    Robot.aldrin.TakeBall(0);
   }
 
   @Override
@@ -25,7 +26,7 @@ public class hatchDeploy extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.doHatch(0);
+    Robot.aldrin.TakeBall(0);
   }
 
   @Override

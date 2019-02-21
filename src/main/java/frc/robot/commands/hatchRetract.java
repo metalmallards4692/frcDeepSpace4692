@@ -1,27 +1,24 @@
 
+
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class hatchPickup extends Command {
-  public hatchPickup() {
+public class hatchRetract extends Command {
+  public hatchRetract() {
     requires(Robot.aldrin);
-
   }
 
-  
   @Override
   protected void initialize() {
   }
 
- 
   @Override
   protected void execute() {
-    Robot.aldrin.doHatch(1);
+    Robot.aldrin.HatchIn();
   }
 
- 
   @Override
   protected boolean isFinished() {
     return false;
@@ -30,7 +27,7 @@ public class hatchPickup extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.doHatch(0);
+    Robot.aldrin.HatchStop();
   }
 
 

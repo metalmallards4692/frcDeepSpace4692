@@ -1,13 +1,12 @@
 
-
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
+import frc.robot.*;
 
-public class PivotOut extends Command {
-  public PivotOut() {
-    requires(Robot.aldrin);
+public class ElevatorStop extends Command {
+  public ElevatorStop() {
+    requires(Robot.elevator);
   }
 
   
@@ -15,24 +14,20 @@ public class PivotOut extends Command {
   protected void initialize() {
   }
 
- 
   @Override
   protected void execute() {
-    Robot.aldrin.ArmPivot(.35);
+    Robot.elevator.ElevatorDirection(0);
   }
-
 
   @Override
   protected boolean isFinished() {
     return false;
   }
 
- 
   @Override
   protected void end() {
-    Robot.aldrin.ArmPivot(0);
+    Robot.elevator.ElevatorDirection(0);
   }
-
 
   @Override
   protected void interrupted() {

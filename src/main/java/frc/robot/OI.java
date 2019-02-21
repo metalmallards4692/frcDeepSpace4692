@@ -9,6 +9,8 @@ public class OI {
 
     public final Joystick leftJoy = new Joystick(RobotMap.LeftJoystick);
 	public final Joystick rightJoy = new Joystick(RobotMap.RightJoystick);
+	public JoystickButton rTrigger;
+	public JoystickButton lTrigger;
 	public final Joystick gamepad = new Joystick(RobotMap.Gamepad);
 	public JoystickButton gamepadX;	
 	public JoystickButton gamepadA;
@@ -41,6 +43,8 @@ public class OI {
 		return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
 	}
 	public OI(){
+		rTrigger = new JoystickButton(rightJoy, RobotMap.JoystickTriggerR);
+		lTrigger = new JoystickButton(leftJoy, RobotMap.JoystickTriggerL);
 		gamepadX = new JoystickButton(gamepad, RobotMap.GamepadX);
 		gamepadA = new JoystickButton(gamepad, RobotMap.GamepadA);
 		gamepadY = new JoystickButton(gamepad, RobotMap.GamepadY);
@@ -58,14 +62,24 @@ public class OI {
 		gamepadL1.whileHeld(new ArmStrongDrop());
 		gamepadL1.whenReleased(new ArmStrongStop());
 		gamepadA.whileHeld(new BallIntake());
+		gamepadA.whenReleased(new BallStop());
 		gamepadY.whileHeld(new BallOuttake());
+		gamepadY.whenReleased(new BallStop());
 		gamepadStart.whileHeld(new ElevatorUp());
+		gamepadStart.whenReleased(new ElevatorStop());
 		gamepadSelect.whileHeld(new ElevatorDown());
-		gamepadX.whileHeld(new PivotIn());
+		gamepadSelect.whenReleased(new ElevatorStop());
 		gamepadB.whileHeld(new PivotOut());
-		//gamepadB.whenReleased(new PivotStop);
+		gamepadB.whenReleased(new PivotStop());
+		gamepadX.whileHeld(new PivotIn());
+		gamepadX.whenReleased(new PivotStop());
 		gamepadR3.whileHeld(new ArmStrongDrive());
 		gamepadR3.whenReleased(new ArmStrongDriveStop());
+		//command Joystick Calls
+		rTrigger.whileHeld(new hatchExtend());
+		rTrigger.whenReleased(new hatchStop());
+		lTrigger.whileHeld(new hatchRetract());
+		lTrigger.whenReleased(new hatchStop());
 		
 
 	}

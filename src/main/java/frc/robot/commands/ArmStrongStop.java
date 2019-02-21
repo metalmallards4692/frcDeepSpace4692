@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class ArmStrongStop extends Command {
   public ArmStrongStop() {
-  
+    requires(Robot.armStrong);
   }
 
 
