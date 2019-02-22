@@ -4,7 +4,7 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
-import frc.robot.commands.*;
+//import frc.robot.commands.*;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
