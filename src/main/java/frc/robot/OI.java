@@ -57,25 +57,31 @@ public class OI {
 		gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
 
 		//command calls
+			//ArmStrongLift
 		gamepadR1.whileHeld(new ArmStrongLift());
 		gamepadR1.whenReleased(new ArmStrongStop());
 		gamepadL1.whileHeld(new ArmStrongDrop());
 		gamepadL1.whenReleased(new ArmStrongStop());
+			//BallIntake
 		gamepadA.whileHeld(new BallIntake());
 		gamepadA.whenReleased(new BallStop());
 		gamepadY.whileHeld(new BallOuttake());
 		gamepadY.whenReleased(new BallStop());
+			//Elevator
 		gamepadStart.whileHeld(new ElevatorUp());
 		gamepadStart.whenReleased(new ElevatorStop());
 		gamepadSelect.whileHeld(new ElevatorDown());
 		gamepadSelect.whenReleased(new ElevatorStop());
+			//Pivot
 		gamepadB.whileHeld(new PivotOut());
 		gamepadB.whenReleased(new PivotStop());
 		gamepadX.whileHeld(new PivotIn());
 		gamepadX.whenReleased(new PivotStop());
+			//ArmStrongDrive
 		gamepadR3.whileHeld(new ArmStrongDrive());
 		gamepadR3.whenReleased(new ArmStrongDriveStop());
 		//command Joystick Calls
+			//Hatch
 		rTrigger.whileHeld(new hatchExtend());
 		rTrigger.whenReleased(new hatchStop());
 		lTrigger.whileHeld(new hatchRetract());
