@@ -21,8 +21,9 @@ public class RobotMap {
     public static int ArmStrong = 51;
     public static int Vacuum = 50;
   //SparkMax Motors
-     public static int ElevatorMotor = 14;
-     public static int ArmStrongLiftMotor = 12;
+     public static int ElevatorMotor = 54;
+     public static int ArmStrongLiftMotor = 55;
+     
   //Joysticks
       public static int RightJoystick = 0;
       public static int LeftJoystick = 1;

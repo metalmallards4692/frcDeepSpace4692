@@ -1,22 +1,25 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
+
 //import frc.robot.Robot;
 //import frc.robot.RobotMap;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-
-import com.revrobotics.CANSparkMax;
+//import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+//import com.revrobotics.CANSparkMax;
 
 public class Elevator extends Subsystem {
-  private CANSparkMax ElevatorMotor;
+  private TalonSRX ElevatorMotor;
 
   public Elevator() {
-    ElevatorMotor = new CANSparkMax(14, MotorType.kBrushless);
+    ElevatorMotor = new TalonSRX(RobotMap.ElevatorMotor);
   }
 
   public void ElevatorDirection(double output) {
        
-        ElevatorMotor.set(output);
+        ElevatorMotor.set(ControlMode.PercentOutput, output);
 
   }
 

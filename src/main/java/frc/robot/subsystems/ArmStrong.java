@@ -4,8 +4,8 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+//import com.revrobotics.CANSparkMax;
+//import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -14,12 +14,13 @@ import frc.robot.RobotMap;
 
 
 public class ArmStrong extends Subsystem {
-  private CANSparkMax ArmStrongLiftMotor; 
+  private TalonSRX ArmStrongLiftMotor; 
   private TalonSRX ArmStrongDriveMotor;
   private DoubleSolenoid ArmStrongCylinders = new DoubleSolenoid(0,2,3);
+  private DoubleSolenoid ArmStrongOut = new DoubleSolenoid(0,4,5);
 
   public ArmStrong() {
-    ArmStrongLiftMotor = new CANSparkMax(12, MotorType.kBrushless);
+    ArmStrongLiftMotor = new TalonSRX(RobotMap.ArmStrongLiftMotor);
     ArmStrongDriveMotor = new TalonSRX(RobotMap.ArmStrong);
 
     Robot.initTalon(ArmStrongDriveMotor);
@@ -32,8 +33,8 @@ public class ArmStrong extends Subsystem {
   }
 
   public void ArmStrongLift(double output) {  
-   
-      ArmStrongLiftMotor.set(output);
+      ArmStrongOut.set(DoubleSolenoid.Value.kForward);
+      ArmStrongLiftMotor.set(ControlMode.PercentOutput, output);
   }
 
   public void ArmStrongAssistUp() {
