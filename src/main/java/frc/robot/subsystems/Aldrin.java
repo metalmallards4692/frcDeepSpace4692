@@ -7,13 +7,15 @@ import frc.robot.RobotMap;
 //import frc.robot.commands.*;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 public class Aldrin extends Subsystem {
   private TalonSRX Intake;
   private TalonSRX Pivot;
   private TalonSRX Vacuum;
-  private DoubleSolenoid HatchAction = new DoubleSolenoid(0, 0, 1);
+  private DoubleSolenoid HatchAction;
 
   public Aldrin() {
     Vacuum = new TalonSRX(RobotMap.Vacuum);
@@ -22,6 +24,9 @@ public class Aldrin extends Subsystem {
     Robot.initTalon(Pivot);
     Intake = new TalonSRX(RobotMap.Intake);
     Robot.initTalon(Intake);
+    HatchAction = new DoubleSolenoid(0, 0, 1);
+
+    HatchAction.set(Value.kOff);
   }
   
   public void TakeBall(double output) {
@@ -37,8 +42,8 @@ public class Aldrin extends Subsystem {
   }
 
   public void HatchIn() {
-    Vacuum.set(ControlMode.PercentOutput, -.5);
     HatchAction.set(DoubleSolenoid.Value.kReverse);
+    Vacuum.set(ControlMode.PercentOutput, -.5);    
   }
 
   public void HatchStop() {

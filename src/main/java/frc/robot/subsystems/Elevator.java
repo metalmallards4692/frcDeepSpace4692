@@ -19,13 +19,23 @@ public class Elevator extends Subsystem {
     Robot.initTalon(ElevatorMotor);
   }
 
-  public void ElevatorDirection(double output) {
+  public void ElevatorUp(double output) {
        
         ElevatorMotor.set(ControlMode.PercentOutput, output);
 
   }
 
-  
+  public void ElevatorDown(double output) {
+       
+    ElevatorMotor.set(ControlMode.PercentOutput, output);
+
+}
+
+public void ElevatorStop(double output) {
+       
+  ElevatorMotor.set(ControlMode.PercentOutput, output);
+
+} 
 
 
   @Override

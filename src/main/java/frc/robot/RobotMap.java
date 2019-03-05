@@ -32,6 +32,10 @@ public class RobotMap {
           public static int BtnLiftUP = 2;
           public static int JoystickTriggerR = 1;
           public static int JoystickTriggerL = 1;
+          public static int JoystickFirstButton = 3;
+          public static int JoystickSecondButton = 4;
+          public static int JoystickButtonOut = 4;
+          public static int JoystickButtonIn = 3;
   //Gamepad
       public static int Gamepad = 2;
        //Gamepad Buttons
@@ -46,6 +50,7 @@ public class RobotMap {
         //Gamepad Joysticks
             public static int GamepadL3 = 9;
             public static int GamepadR3 = 10;
+            
            
 
       }

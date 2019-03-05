@@ -11,6 +11,10 @@ public class OI {
 	public final Joystick rightJoy = new Joystick(RobotMap.RightJoystick);
 	public JoystickButton rTrigger;
 	public JoystickButton lTrigger;
+	public JoystickButton firstJoystickButton;
+	public JoystickButton secondJoystickButton;
+	public JoystickButton joystickButtonOut;
+	public JoystickButton joystickButtonIn;
 	public final Joystick gamepad = new Joystick(RobotMap.Gamepad);
 	public JoystickButton gamepadX;	
 	public JoystickButton gamepadA;
@@ -45,6 +49,10 @@ public class OI {
 	public OI(){
 		rTrigger = new JoystickButton(rightJoy, RobotMap.JoystickTriggerR);
 		lTrigger = new JoystickButton(leftJoy, RobotMap.JoystickTriggerL);
+		firstJoystickButton = new JoystickButton(rightJoy, RobotMap.JoystickFirstButton);
+		secondJoystickButton = new JoystickButton(leftJoy, RobotMap.JoystickSecondButton);
+		joystickButtonOut = new JoystickButton(rightJoy, RobotMap.JoystickButtonOut);
+		joystickButtonIn = new JoystickButton(leftJoy, RobotMap.JoystickButtonIn);
 		gamepadX = new JoystickButton(gamepad, RobotMap.GamepadX);
 		gamepadA = new JoystickButton(gamepad, RobotMap.GamepadA);
 		gamepadY = new JoystickButton(gamepad, RobotMap.GamepadY);
@@ -80,12 +88,18 @@ public class OI {
 			//ArmStrongDrive
 		gamepadR3.whileHeld(new ArmStrongDrive());
 		gamepadR3.whenReleased(new ArmStrongDriveStop());
+		
 		//command Joystick Calls
 			//Hatch
 		rTrigger.whileHeld(new hatchExtend());
 		rTrigger.whenReleased(new hatchStop());
 		lTrigger.whileHeld(new hatchRetract());
 		lTrigger.whenReleased(new hatchStop());
+		firstJoystickButton.whenPressed(new ArmStrongFrontDown());
+		secondJoystickButton.whenPressed(new ArmStrongFrontUp());
+		joystickButtonIn.whenPressed(new ArmStrongArmIn());
+		joystickButtonOut.whenPressed(new ArmStrongArmOut());
+		
 		
 
 	}

@@ -1,22 +1,22 @@
 
+
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.*;
+import frc.robot.Robot;
 
-public class ElevatorStop extends Command {
-  public ElevatorStop() {
-    requires(Robot.elevator);
+public class ArmStrongFrontStop extends Command {
+  public ArmStrongFrontStop() {
+
   }
 
-  
   @Override
   protected void initialize() {
   }
 
   @Override
   protected void execute() {
-    Robot.elevator.ElevatorStop(0);
+    Robot.armStrong.ArmStongFrontCylindersOff();
   }
 
   @Override
@@ -26,7 +26,6 @@ public class ElevatorStop extends Command {
 
   @Override
   protected void end() {
-    Robot.elevator.ElevatorStop(0);
   }
 
   @Override
