@@ -2,7 +2,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-
+import frc.robot.Robot;
 //import frc.robot.Robot;
 //import frc.robot.RobotMap;
 //import com.revrobotics.CANSparkMaxLowLevel.MotorType;
@@ -15,6 +15,8 @@ public class Elevator extends Subsystem {
 
   public Elevator() {
     ElevatorMotor = new TalonSRX(RobotMap.ElevatorMotor);
+
+    Robot.initTalon(ElevatorMotor);
   }
 
   public void ElevatorDirection(double output) {

@@ -20,7 +20,7 @@ public class RobotMap {
     public static int Pivot = 49;
     public static int ArmStrong = 51;
     public static int Vacuum = 50;
-  //SparkMax Motors
+  //SparkMax Motors Changed To TalonSRX 
      public static int ElevatorMotor = 54;
      public static int ArmStrongLiftMotor = 55;
      

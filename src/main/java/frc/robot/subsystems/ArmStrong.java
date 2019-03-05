@@ -24,6 +24,7 @@ public class ArmStrong extends Subsystem {
     ArmStrongDriveMotor = new TalonSRX(RobotMap.ArmStrong);
 
     Robot.initTalon(ArmStrongDriveMotor);
+    Robot.initTalon(ArmStrongLiftMotor);
   }
 
   public void ArmStrongDrive(double output) {
