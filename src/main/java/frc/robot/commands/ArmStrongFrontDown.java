@@ -7,7 +7,7 @@ import frc.robot.Robot;
 
 public class ArmStrongFrontDown extends Command {
   public ArmStrongFrontDown() {
- 
+    requires(Robot.armStrong);
   }
 
  

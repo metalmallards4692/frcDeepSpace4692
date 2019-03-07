@@ -13,8 +13,8 @@ public class OI {
 	public JoystickButton lTrigger;
 	public JoystickButton firstJoystickButton;
 	public JoystickButton secondJoystickButton;
-	public JoystickButton joystickButtonOut;
-	public JoystickButton joystickButtonIn;
+	public JoystickButton armStrongArmButtonOut;
+	public JoystickButton armStrongArmButtonIn;
 	public final Joystick gamepad = new Joystick(RobotMap.Gamepad);
 	public JoystickButton gamepadX;	
 	public JoystickButton gamepadA;
@@ -27,6 +27,8 @@ public class OI {
 	public JoystickButton gamepadR3;
 	public JoystickButton gamepadL3;
 	public JoystickButton gamepadDPadDown;
+	public JoystickButton vacuumOn;
+	public JoystickButton vacuumOff;
 	//original value was 0.05
     public static final double JOY_DEADZONE = 0.25;
     
@@ -51,8 +53,8 @@ public class OI {
 		lTrigger = new JoystickButton(leftJoy, RobotMap.JoystickTriggerL);
 		firstJoystickButton = new JoystickButton(rightJoy, RobotMap.JoystickFirstButton);
 		secondJoystickButton = new JoystickButton(leftJoy, RobotMap.JoystickSecondButton);
-		joystickButtonOut = new JoystickButton(rightJoy, RobotMap.JoystickButtonOut);
-		joystickButtonIn = new JoystickButton(leftJoy, RobotMap.JoystickButtonIn);
+		armStrongArmButtonOut = new JoystickButton(rightJoy, RobotMap.ArmStrongArmButtonOut);
+		armStrongArmButtonIn = new JoystickButton(leftJoy, RobotMap.ArmStrongArmButtonIn);
 		gamepadX = new JoystickButton(gamepad, RobotMap.GamepadX);
 		gamepadA = new JoystickButton(gamepad, RobotMap.GamepadA);
 		gamepadY = new JoystickButton(gamepad, RobotMap.GamepadY);
@@ -63,6 +65,8 @@ public class OI {
 		gamepadL1 = new JoystickButton(gamepad, RobotMap.GamepadL1);
 		gamepadL3 = new JoystickButton(gamepad, RobotMap.GamepadL3);
 		gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
+		vacuumOn = new JoystickButton(rightJoy, RobotMap.VacuumButtonOn);
+		vacuumOff = new JoystickButton(leftJoy, RobotMap.VacuumButtonOff);
 
 		//command calls
 			//ArmStrongLift
@@ -91,14 +95,20 @@ public class OI {
 		
 		//command Joystick Calls
 			//Hatch
-		rTrigger.whileHeld(new hatchExtend());
-		rTrigger.whenReleased(new hatchStop());
-		lTrigger.whileHeld(new hatchRetract());
-		lTrigger.whenReleased(new hatchStop());
+		rTrigger.whenPressed(new hatchExtend());
+		rTrigger.whenInactive(new hatchStop());
+		lTrigger.whenPressed(new hatchRetract());
+		lTrigger.whenInactive(new hatchStop());
 		firstJoystickButton.whenPressed(new ArmStrongFrontDown());
+		firstJoystickButton.whenInactive(new ArmStrongFrontStop());
 		secondJoystickButton.whenPressed(new ArmStrongFrontUp());
-		joystickButtonIn.whenPressed(new ArmStrongArmIn());
-		joystickButtonOut.whenPressed(new ArmStrongArmOut());
+		secondJoystickButton.whenInactive(new ArmStrongFrontStop());
+		armStrongArmButtonIn.whenPressed(new ArmStrongArmIn());
+		armStrongArmButtonIn.whenInactive(new ArmStrongArmStop());
+		armStrongArmButtonOut.whenPressed(new ArmStrongArmOut());
+		armStrongArmButtonOut.whenInactive(new ArmStrongArmStop());
+		vacuumOn.whenPressed(new VacuumGo());
+		vacuumOff.whenPressed(new VacuumStop());
 		
 		
 

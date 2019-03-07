@@ -7,7 +7,7 @@ import frc.robot.Robot;
 
 public class ArmStrongFrontStop extends Command {
   public ArmStrongFrontStop() {
-
+    requires(Robot.armStrong);
   }
 
   @Override

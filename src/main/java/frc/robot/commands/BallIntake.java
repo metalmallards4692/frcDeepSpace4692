@@ -19,8 +19,8 @@ public class BallIntake extends Command {
   
   @Override
   protected void execute() {
-    //Check The Motor Direction
-    Robot.aldrin.TakeBall(.5);
+   
+    Robot.aldrin.TakeBall(1);
   }
 
   

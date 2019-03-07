@@ -16,7 +16,7 @@ public class ElevatorUp extends Command {
 
   @Override
   protected void execute() {
-    Robot.elevator.ElevatorUp(.5);
+    Robot.elevator.ElevatorUp(1);
   }
 
   @Override

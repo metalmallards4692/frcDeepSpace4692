@@ -18,7 +18,7 @@ public class PivotIn extends Command {
 
   @Override
   protected void execute() {
-    Robot.aldrin.ArmPivot(-.35);
+    Robot.aldrin.ArmPivot(-.5);
   }
 
  

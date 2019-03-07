@@ -44,7 +44,10 @@ public class Robot extends TimedRobot {
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new TankDrive());
     TankDrive = new TankDrive();
+    
     //SmartDashboard.putData("Auto mode", m_chooser);
+    Robot.armStrong.ArmStrongArmIn();
+    Robot.armStrong.ArmStrongFrontCylindersRetract();
   }
 
   

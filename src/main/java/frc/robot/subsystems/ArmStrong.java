@@ -43,11 +43,11 @@ public class ArmStrong extends Subsystem {
   }
 
   public void ArmStrongArmIn() {
-    ArmStrongArm.set(Value.kReverse);
+    ArmStrongArm.set(DoubleSolenoid.Value.kReverse);
   }
 
   public void ArmStrongArmStop() {
-    ArmStrongArm.set(Value.kOff);
+    ArmStrongArm.set(DoubleSolenoid.Value.kOff);
   }
 
   public void ArmStrongFrontCylindersExtend() {

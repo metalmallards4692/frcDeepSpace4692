@@ -19,7 +19,7 @@ public class ArmStrongDrive extends Command {
 
   @Override
   protected void execute() {
-    Robot.armStrong.ArmStrongDrive(0.42);
+    Robot.armStrong.ArmStrongDrive(-.45);
   }
 
  

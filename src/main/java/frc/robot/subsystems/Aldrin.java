@@ -6,6 +6,8 @@ import frc.robot.Robot;
 import frc.robot.RobotMap;
 //import frc.robot.commands.*;
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
+
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
@@ -22,8 +24,10 @@ public class Aldrin extends Subsystem {
     Robot.initTalon(Vacuum);
     Pivot = new TalonSRX(RobotMap.Pivot);
     Robot.initTalon(Pivot);
+    Pivot.setNeutralMode(NeutralMode.Brake);
     Intake = new TalonSRX(RobotMap.Intake);
     Robot.initTalon(Intake);
+    Intake.setNeutralMode(NeutralMode.Brake);
     HatchAction = new DoubleSolenoid(0, 0, 1);
 
     HatchAction.set(Value.kOff);
@@ -33,17 +37,25 @@ public class Aldrin extends Subsystem {
     
     Intake.set(ControlMode.PercentOutput, output);
   }
+
+  public void VacuumStart(double output) {
+    Vacuum.set(ControlMode.PercentOutput, output);
+  }
+
+  public void VacuumOff(double output) {
+    Vacuum.set(ControlMode.PercentOutput, output);
+  }
   
 
   public void HatchOut() {
    
-    Vacuum.set(ControlMode.PercentOutput, .5);
+    //Vacuum.set(ControlMode.PercentOutput, .5);
     HatchAction.set(DoubleSolenoid.Value.kForward);
   }
 
   public void HatchIn() {
     HatchAction.set(DoubleSolenoid.Value.kReverse);
-    Vacuum.set(ControlMode.PercentOutput, -.5);    
+    //Vacuum.set(ControlMode.PercentOutput, -.5);    
   }
 
   public void HatchStop() {
