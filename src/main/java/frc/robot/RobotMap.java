@@ -37,7 +37,7 @@ public class RobotMap {
           public static int ArmStrongArmButtonOut = 4;
           public static int ArmStrongArmButtonIn = 3;
           public static int VacuumButtonOn = 2;
-          public static int VacuumButtonOff = 2;
+          public static int PressureReleaseRT = 2;
   //Gamepad
       public static int Gamepad = 2;
       public static int Gamepad2 = 3;

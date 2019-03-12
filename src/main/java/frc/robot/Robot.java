@@ -25,6 +25,7 @@ public class Robot extends TimedRobot {
   public static Hatch hatch = new Hatch();
   public static Intake intake = new Intake();
   public static Pivot pivot = new Pivot();
+  public static ServoStuff servoStuff = new ServoStuff();
   private Command TankDrive;
   //private Command ArmStrongDrive;
   
@@ -51,6 +52,7 @@ public class Robot extends TimedRobot {
     //SmartDashboard.putData("Auto mode", m_chooser);
     Robot.armStrong.ArmStrongArmIn();
     Robot.armStrong.ArmStrongFrontCylindersRetract();
+    Robot.servoStuff.servoHome();
   }
 
   

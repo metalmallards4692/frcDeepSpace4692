@@ -38,7 +38,7 @@ public class OI {
 	public JoystickButton gamepad2R3;
 	public JoystickButton gamepad2L3;
 	public JoystickButton vacuumOn;
-	public JoystickButton vacuumOff;
+	public JoystickButton pressureReleaseBtn;
 	//original value was 0.05
     public static final double JOY_DEADZONE = 0.25;
     
@@ -76,7 +76,7 @@ public class OI {
 		gamepadL3 = new JoystickButton(gamepad, RobotMap.GamepadL3);
 		gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
 		vacuumOn = new JoystickButton(rightJoy, RobotMap.VacuumButtonOn);
-		vacuumOff = new JoystickButton(leftJoy, RobotMap.VacuumButtonOff);
+		pressureReleaseBtn = new JoystickButton(leftJoy, RobotMap.PressureReleaseRT);
 		//New Gamepad
 	 gamepad2X = new JoystickButton(gamepad2, RobotMap.Gamepad2X);
 	 gamepad2A = new JoystickButton(gamepad2, RobotMap.Gamepad2A);
@@ -128,10 +128,10 @@ public class OI {
 		armStrongArmButtonIn.whenInactive(new ArmStrongArmStop());
 		armStrongArmButtonOut.whenPressed(new ArmStrongArmOut());
 		armStrongArmButtonOut.whenInactive(new ArmStrongArmStop());
-		vacuumOn.whenPressed(new VacuumGo());
-		vacuumOff.whenPressed(new VacuumStop());
-		
-		
+		vacuumOn.whileHeld(new VacuumGo());
+		vacuumOn.whenReleased(new VacuumStop());
+		pressureReleaseBtn.whileHeld(new PressureRelease());	
+		pressureReleaseBtn.whenReleased(new PressureReleaseOff());
 
 	}
  
