@@ -5,7 +5,7 @@ import frc.robot.Robot;
 
 public class BallOuttake extends Command {
   public BallOuttake() {
-    requires(Robot.aldrin);
+    requires(Robot.intake);
   }
 
   @Override
@@ -14,7 +14,7 @@ public class BallOuttake extends Command {
 
   @Override
   protected void execute() {
-    Robot.aldrin.TakeBall(-.5);
+    Robot.intake.TakeBall(-1);
   }
 
   @Override
@@ -24,7 +24,7 @@ public class BallOuttake extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.TakeBall(0);
+    Robot.intake.TakeBall(0);
   }
 
   @Override

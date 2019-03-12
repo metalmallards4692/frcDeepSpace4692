@@ -7,7 +7,7 @@ import frc.robot.Robot;
 
 public class PivotOut extends Command {
   public PivotOut() {
-    requires(Robot.aldrin);
+    requires(Robot.pivot);
   }
 
   
@@ -18,7 +18,7 @@ public class PivotOut extends Command {
  
   @Override
   protected void execute() {
-    Robot.aldrin.ArmPivot(.35);
+    Robot.pivot.ArmPivot(.35);
   }
 
 
@@ -30,7 +30,7 @@ public class PivotOut extends Command {
  
   @Override
   protected void end() {
-    Robot.aldrin.ArmPivot(0);
+    Robot.pivot.ArmPivot(0);
   }
 
 

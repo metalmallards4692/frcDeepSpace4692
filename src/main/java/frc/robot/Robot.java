@@ -22,6 +22,9 @@ public class Robot extends TimedRobot {
   public static Elevator elevator = new Elevator();
   public static Aldrin aldrin = new Aldrin();
   public static ArmStrong armStrong = new ArmStrong();
+  public static Hatch hatch = new Hatch();
+  public static Intake intake = new Intake();
+  public static Pivot pivot = new Pivot();
   private Command TankDrive;
   //private Command ArmStrongDrive;
   

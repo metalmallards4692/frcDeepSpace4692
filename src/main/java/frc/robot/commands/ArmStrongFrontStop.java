@@ -12,11 +12,12 @@ public class ArmStrongFrontStop extends Command {
 
   @Override
   protected void initialize() {
+    Robot.armStrong.ArmStrongFrontCylindersOff();
   }
 
   @Override
   protected void execute() {
-    Robot.armStrong.ArmStongFrontCylindersOff();
+    Robot.armStrong.ArmStrongFrontCylindersOff();
   }
 
   @Override

@@ -7,16 +7,17 @@ import frc.robot.Robot;
 
 public class hatchStop extends Command {
   public hatchStop() {
-    requires(Robot.aldrin);
+    requires(Robot.hatch);
   }
 
   @Override
   protected void initialize() {
+    Robot.hatch.HatchStop();
   }
 
   @Override
   protected void execute() {
-    Robot.aldrin.HatchStop();
+    Robot.hatch.HatchStop();
   }
 
   @Override
@@ -26,7 +27,7 @@ public class hatchStop extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.HatchStop();
+    Robot.hatch.HatchStop();
   }
 
   @Override

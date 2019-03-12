@@ -43,8 +43,8 @@ public class DriveTrain extends Subsystem {
   }
 
   public void DriveBot(ControlMode mode, double leftvalue, double rightvalue) {
-    LeftMotor.set(mode, rightvalue);
-    RightMotor.set(mode, -leftvalue);
+    LeftMotor.set(mode, leftvalue);
+    RightMotor.set(mode, -rightvalue);
   }
 
   @Override

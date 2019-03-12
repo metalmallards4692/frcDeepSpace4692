@@ -13,6 +13,7 @@ public class ArmStrongFrontUp extends Command {
 
   @Override
   protected void initialize() {
+    Robot.armStrong.ArmStrongFrontCylindersRetract();
   }
 
 
@@ -30,6 +31,7 @@ public class ArmStrongFrontUp extends Command {
 
   @Override
   protected void end() {
+    Robot.armStrong.ArmStrongFrontCylindersOff();
   }
 
 

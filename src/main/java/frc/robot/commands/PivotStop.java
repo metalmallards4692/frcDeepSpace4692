@@ -7,7 +7,7 @@ import frc.robot.Robot;
 
 public class PivotStop extends Command {
   public PivotStop() {
-    requires(Robot.aldrin);
+    requires(Robot.pivot);
   }
 
   @Override
@@ -16,7 +16,7 @@ public class PivotStop extends Command {
 
   @Override
   protected void execute() {
-    Robot.aldrin.ArmPivot(0);
+    Robot.pivot.ArmPivot(0);
   }
 
   @Override
@@ -26,7 +26,7 @@ public class PivotStop extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.ArmPivot(0);
+    Robot.pivot.ArmPivot(0);
   }
 
   @Override

@@ -13,6 +13,7 @@ public class ArmStrongArmOut extends Command {
 
   @Override
   protected void initialize() {
+    Robot.armStrong.ArmStrongArmOut();
   }
 
 
@@ -30,6 +31,7 @@ public class ArmStrongArmOut extends Command {
 
   @Override
   protected void end() {
+    Robot.armStrong.ArmStrongArmStop();
   }
 
  

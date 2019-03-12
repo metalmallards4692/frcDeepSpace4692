@@ -16,6 +16,7 @@ public class OI {
 	public JoystickButton armStrongArmButtonOut;
 	public JoystickButton armStrongArmButtonIn;
 	public final Joystick gamepad = new Joystick(RobotMap.Gamepad);
+	public final Joystick gamepad2 = new Joystick(RobotMap.Gamepad2);
 	public JoystickButton gamepadX;	
 	public JoystickButton gamepadA;
 	public JoystickButton gamepadY;
@@ -26,7 +27,16 @@ public class OI {
 	public JoystickButton gamepadR1;
 	public JoystickButton gamepadR3;
 	public JoystickButton gamepadL3;
-	public JoystickButton gamepadDPadDown;
+	public JoystickButton gamepad2X;
+	public JoystickButton gamepad2A;
+	public JoystickButton gamepad2Y;
+	public JoystickButton gamepad2B;
+	public JoystickButton gamepad2Start;
+	public JoystickButton gamepad2Select;
+	public JoystickButton gamepad2L1;
+	public JoystickButton gamepad2R1;
+	public JoystickButton gamepad2R3;
+	public JoystickButton gamepad2L3;
 	public JoystickButton vacuumOn;
 	public JoystickButton vacuumOff;
 	//original value was 0.05
@@ -67,6 +77,17 @@ public class OI {
 		gamepadR3 = new JoystickButton(gamepad, RobotMap.GamepadR3);
 		vacuumOn = new JoystickButton(rightJoy, RobotMap.VacuumButtonOn);
 		vacuumOff = new JoystickButton(leftJoy, RobotMap.VacuumButtonOff);
+		//New Gamepad
+	 gamepad2X = new JoystickButton(gamepad2, RobotMap.Gamepad2X);
+	 gamepad2A = new JoystickButton(gamepad2, RobotMap.Gamepad2A);
+	 gamepad2Y = new JoystickButton(gamepad2, RobotMap.Gamepad2Y);
+	 gamepad2B = new JoystickButton(gamepad2, RobotMap.Gamepad2B);
+	 gamepad2Start = new JoystickButton(gamepad2, RobotMap.Gamepad2Select);
+	 gamepad2Select = new JoystickButton(gamepad2, RobotMap.Gamepad2Start);
+	 gamepad2L1 = new JoystickButton(gamepad2, RobotMap.Gamepad2R1);
+	 gamepad2R1 = new JoystickButton(gamepad2, RobotMap.Gamepad2L1);
+	 gamepad2R3 = new JoystickButton(gamepad2, RobotMap.Gamepad2L3);
+	 gamepad2L3 = new JoystickButton(gamepad2, RobotMap.Gamepad2R3);
 
 		//command calls
 			//ArmStrongLift
@@ -80,9 +101,9 @@ public class OI {
 		gamepadY.whileHeld(new BallOuttake());
 		gamepadY.whenReleased(new BallStop());
 			//Elevator
-		gamepadStart.whileHeld(new ElevatorUp());
+		gamepadStart.whileHeld(new ElevatorDown());
 		gamepadStart.whenReleased(new ElevatorStop());
-		gamepadSelect.whileHeld(new ElevatorDown());
+		gamepadSelect.whileHeld(new ElevatorUp());
 		gamepadSelect.whenReleased(new ElevatorStop());
 			//Pivot
 		gamepadB.whileHeld(new PivotOut());

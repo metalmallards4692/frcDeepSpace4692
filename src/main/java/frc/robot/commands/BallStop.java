@@ -6,7 +6,7 @@ import frc.robot.Robot;
 
 public class BallStop extends Command {
   public BallStop() {
-    requires(Robot.aldrin);
+    requires(Robot.intake);
   }
 
 
@@ -16,7 +16,7 @@ public class BallStop extends Command {
 
   @Override
   protected void execute() {
-    Robot.aldrin.TakeBall(0);
+    Robot.intake.TakeBall(0);
   }
 
   @Override
@@ -26,7 +26,7 @@ public class BallStop extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.TakeBall(0);
+    Robot.intake.TakeBall(0);
   }
 
   @Override

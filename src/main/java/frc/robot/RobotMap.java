@@ -40,6 +40,7 @@ public class RobotMap {
           public static int VacuumButtonOff = 2;
   //Gamepad
       public static int Gamepad = 2;
+      public static int Gamepad2 = 3;
        //Gamepad Buttons
            public static int GamepadA = 1;
            public static int GamepadB = 2;
@@ -49,6 +50,17 @@ public class RobotMap {
            public static int GamepadR1 = 6;           
            public static int GamepadSelect = 7;
            public static int GamepadStart = 8;
+           //Gamepad
+           public static int Gamepad2A = 1;
+           public static int Gamepad2B = 2;
+           public static int Gamepad2X = 3;
+           public static int Gamepad2Y = 4;
+           public static int Gamepad2L1 = 5;
+           public static int Gamepad2R1 = 6;
+           public static int Gamepad2Select = 7;
+           public static int Gamepad2Start = 8;
+           public static int Gamepad2L3 = 9;
+           public static int Gamepad2R3 = 10;
         //Gamepad Joysticks
             public static int GamepadL3 = 9;
             public static int GamepadR3 = 10;

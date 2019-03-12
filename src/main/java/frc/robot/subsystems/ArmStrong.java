@@ -51,14 +51,14 @@ public class ArmStrong extends Subsystem {
   }
 
   public void ArmStrongFrontCylindersExtend() {
-    ArmStrongFrontCylinders.set(Value.kForward);
+    ArmStrongFrontCylinders.set(DoubleSolenoid.Value.kForward);
   }
 
   public void ArmStrongFrontCylindersRetract() {
-    ArmStrongFrontCylinders.set(Value.kReverse);
+    ArmStrongFrontCylinders.set(DoubleSolenoid.Value.kReverse);
   }
-  public void ArmStongFrontCylindersOff() {
-    ArmStrongFrontCylinders.set(Value.kOff);
+  public void ArmStrongFrontCylindersOff() {
+    ArmStrongFrontCylinders.set(DoubleSolenoid.Value.kOff);
   }
     //Motor
   public void ArmStrongLift(double output) { 

@@ -7,16 +7,17 @@ import frc.robot.Robot;
 
 public class hatchRetract extends Command {
   public hatchRetract() {
-    requires(Robot.aldrin);
+    requires(Robot.hatch);
   }
 
   @Override
   protected void initialize() {
+    Robot.hatch.HatchIn();
   }
 
   @Override
   protected void execute() {
-    Robot.aldrin.HatchIn();
+    Robot.hatch.HatchIn();
   }
 
   @Override
@@ -27,7 +28,7 @@ public class hatchRetract extends Command {
 
   @Override
   protected void end() {
-    Robot.aldrin.HatchStop();
+    Robot.hatch.HatchStop();
   }
 
 
