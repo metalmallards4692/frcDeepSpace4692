@@ -7,7 +7,7 @@ import frc.robot.Robot;
 
 public class ArmStrongDrop extends Command {
   public ArmStrongDrop() {
-    requires(Robot.armStrong);
+    requires(Robot.armStrongLiftSystem);
   }
 
 
@@ -18,7 +18,7 @@ public class ArmStrongDrop extends Command {
 
   @Override
   protected void execute() {
-    Robot.armStrong.ArmStrongLift(-1);
+    Robot.armStrongLiftSystem.ArmStrongLift(-1);
   }
 
 
@@ -30,7 +30,7 @@ public class ArmStrongDrop extends Command {
 
   @Override
   protected void end() {
-    Robot.armStrong.ArmStrongLift(0);
+    Robot.armStrongLiftSystem.ArmStrongLift(0);
   }
 
 

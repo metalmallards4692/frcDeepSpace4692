@@ -26,6 +26,7 @@ public class Robot extends TimedRobot {
   public static Intake intake = new Intake();
   public static Pivot pivot = new Pivot();
   public static ServoStuff servoStuff = new ServoStuff();
+  public static ArmStrongLiftSystem armStrongLiftSystem = new ArmStrongLiftSystem();
   private Command TankDrive;
   //private Command ArmStrongDrive;
   

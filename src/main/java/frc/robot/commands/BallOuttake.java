@@ -14,7 +14,7 @@ public class BallOuttake extends Command {
 
   @Override
   protected void execute() {
-    Robot.intake.TakeBall(-1);
+    Robot.intake.TakeBall(-.7);
   }
 
   @Override

@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class ArmStrongStop extends Command {
   public ArmStrongStop() {
-    requires(Robot.armStrong);
+    requires(Robot.armStrongLiftSystem);
   }
 
 
@@ -17,7 +17,7 @@ public class ArmStrongStop extends Command {
 
   @Override
   protected void execute() {
-    Robot.armStrong.ArmStrongLift(0);
+    Robot.armStrongLiftSystem.ArmStrongLift(0);
     
   }
 
@@ -30,7 +30,7 @@ public class ArmStrongStop extends Command {
 
   @Override
   protected void end() {
-    Robot.armStrong.ArmStrongLift(0);
+    Robot.armStrongLiftSystem.ArmStrongLift(0);
   }
 
 
